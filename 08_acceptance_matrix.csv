@@ -1,0 +1,13 @@
+ID,Requirement,Stage,Test strategy,Evidence artifact,Risk
+REQ-DM-001,"Gateway, Collector, and Streamer are separate TR-181-style entities",2,Schema validation tests,schema test output,Medium
+REQ-DM-002,Collector supports collection frequency configuration,2/3,Schema + USP Set/Get simulation,unit/integration test output,Medium
+REQ-MON-001,Service metrics and status are readable,3/4/5,Status readback tests,status logs,Medium
+REQ-USP-001,Cloud config can be represented through USP-like flow,3,Fake USP Set/Get tests; later OB-USP test controller,USP harness logs,High
+REQ-DATA-001,Collector -> Streamer -> metrics store path works,5,Local transport integration test,metrics-store received records,Medium
+REQ-DATA-002,Custom ML data does not use IEEE 1905.1 in first prototype,5,Architecture/static review,ADR + code review,Low
+REQ-MAP-001,Multi-AP channel/TX power/credential/topology intent is abstracted,6,Adapter tests,adapter test output,High
+REQ-LCM-001,Generic agent lifecycle supports deploy/start/stop/remove/status,7,Lifecycle adapter tests,lifecycle logs,High
+REQ-ANOM-001,Minimal anomaly resolver emits recommendation without default actuation,8,Rule-based tests,recommendation output,Medium
+REQ-HW-001,Root AP smoke test is safe/read-only by default,9,Script safety tests + manual run,hardware log or blocker,High
+REQ-E2E-001,Cloud config to metrics-store E2E scenario is reproducible,10,Fake E2E and optional hardware E2E,evidence bundle,High
+REQ-REP-001,Report/demo uses real evidence only,11,Report audit,report artifact,Medium
